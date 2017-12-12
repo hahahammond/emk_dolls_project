@@ -48,7 +48,7 @@ nav a {
   cursor: pointer;
   margin: 15px 30px;
   text-align: center;
-  font-family: 'Henny Penny', cursive;
+  font-family: 'Alice', serif;
 }
 
 .btn:hover {
@@ -64,26 +64,32 @@ nav a {
   text-align: center;
 }
 
+h2 {
+  font-family: 'Henny Penny', cursive;
+  text-align: center;
+  line-height: 2em;
+  font-size: 44px;
+  display: inline-block;
+  padding: 0 30px; 
+}
+
 .page-description {
   font-size: 0.8rem;
-  padding: 30px;
+  margin: 0 100px;
   text-align: left;
 }
 
 
-/* Gallery */
-
-h2 {
-  text-align: center;
-  line-height: 2em;
-  font-size: 36px;
-  display: inline-block;
-  padding: 30px;  
-}
+/* Photos */
 
 .thumbnail:hover {
   opacity:0.4;
   cursor: pointer;
+}
+
+#gallery {
+margin: 50 0 25 0px;
+
 }
 
 #big-image-box img {
@@ -112,7 +118,9 @@ h2 {
   ul li {
     display: block;
   }
+}
 
+/* Map */
 
 #map-image-box {
   height: 400px;
@@ -120,6 +128,8 @@ h2 {
   margin: 0 auto;
   padding:7px;
 }
+
+/* Timeline */
 
 #timeline-image-box {
   height: 400px;
