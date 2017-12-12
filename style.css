@@ -1,0 +1,129 @@
+html,
+body {
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Alice', serif;
+  font-size: 24px;
+  line-height: 1.4em;
+  color: black;
+  background-color: white;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+/* Title, Navigation & Description */
+
+.page-title {
+  text-align: center;
+  margin: auto;
+  line-height: 3em;
+}
+
+h1 {
+  font-family: 'Henny Penny', cursive;
+}
+
+.page-title h1 {
+  display: inline-block;
+}
+
+ul li {
+  display: inline-block;
+}
+
+nav a {
+  line-height: 60px;
+  border: 2px solid black;
+  padding: 7px;
+  border-radius: 25px;
+  color: black;
+  text-decoration: none;
+  background-color: #FFC0CB;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 15px 30px;
+  text-align: center;
+  font-family: 'Henny Penny', cursive;
+}
+
+.btn:hover {
+  opacity:0.4;
+}
+
+.btn a:active {
+  position: relative;
+  bottom: 2px;
+}
+
+.main {
+  text-align: center;
+}
+
+.page-description {
+  font-size: 0.8rem;
+  padding: 30px;
+  text-align: left;
+}
+
+
+/* Gallery */
+
+h2 {
+  text-align: center;
+  line-height: 2em;
+  font-size: 36px;
+  display: inline-block;
+  padding: 30px;  
+}
+
+.thumbnail:hover {
+  opacity:0.4;
+  cursor: pointer;
+}
+
+#big-image-box img {
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+  visibility: hidden;
+}
+
+#info-box {
+  font-size: 0.8rem;
+  text-align: left;
+  width:300px;
+  margin: 30 auto;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: black; 
+  color: white;  
+  visibility: hidden;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width:768px) {
+  ul li {
+    display: block;
+  }
+
+
+#map-image-box {
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+  padding:7px;
+}
+
+#timeline-image-box {
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+  padding:7px;
+}
