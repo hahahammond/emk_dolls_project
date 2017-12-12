@@ -24,92 +24,10 @@
     </div>
   </header>
   <div class="main">
+    <h2>About</h2>
     <p class="page-description clearfix">
       EMK has initiated work on the doll collection that was previously housed in the Kennedy Family Home in Hyannisport. Ambassador Joseph P. Kennedy began the doll collection as part of his position at the Court of St. James, with other dolls collected into the 40s, 50s, and possibly 60s. Each doll represents a country or ethnic group, and is dressed according to custom. Part of the Institute’s work included photographing some of the dolls for possible use in a digital exhibit.
     </p>  
-    <div id ="instructions">
-      <h2>Click the thumbnail images below to explore each doll's history</h2>
-    </div>
-    <div id="gallery"></div>
-      <div id="big-image-box">
-        <img src="img/becky.svg">
-      </div>
-      <div id="info-box">
-        <p id="doll_name"></p>
-        <p id="country_of_origin"></p>
-        <p id="gift_giver"></p>
-        <p id="year_acquired"></p>
-        <p id="description"></p>
-      </div> 
-      <ul>
-    </div>
   </div>
-
-<script>
-
-var jsonDollData = [
- {
-   "doll_name": "Becky",
-   "image_file": "img/becky.svg",
-   "country_of_origin": "France",
-   "gift_giver": "Mr. Smith",
-   "year_acquired": 1960,
-   "description": "red hair"
- },
- {
-   "doll_name": "Suzie",
-   "image_file": "img/suzie.svg",
-   "country_of_origin": "Germany",
-   "gift_giver": "Mr. Jones",
-   "year_acquired": 1955,
-   "description": "brown hair"
- },
- {
-   "doll_name": "Jenny",
-   "image_file": "img/jenny.svg",
-   "country_of_origin": "Spain",
-   "gift_giver": "Mr. Dude",
-   "year_acquired": 1941,
-   "description": "blonde hair"
- },
- {
-   "doll_name": "Tiffany",
-   "image_file": "img/tiffany.svg",
-   "country_of_origin": "Japan",
-   "gift_giver": "Mr. Garcia",
-   "year_acquired": 1958,
-   "description": "white hair"
- }
-]
-
-var width = 400,
-    height = 150;
-
-var svg = d3.select("#gallery").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-var g = svg.append("g");
-
-var thumbs = g.selectAll("image")
-  .data(jsonDollData)
-  .enter()
-  .append("svg:image")
-  .attr("xlink:href", function (d) {return d.image_file;})
-  .attr("height","100")
-  .attr("width", "100")
-  .attr("x", function(d,i) {return (i * 100);})
-  .attr("class", "thumbnail")
-  .on("click", function(d){
-      d3.select("#doll_name").text("DOLL NAME: " + d.doll_name);
-      d3.select("#country_of_origin").text("COUNTRY OF ORIGIN: " + d.country_of_origin);
-      d3.select("#gift_giver").text("COURTESY OF: " + d.gift_giver);
-      d3.select("#year_acquired").text("YEAR ACQUIRED: " + d.year_acquired);
-      d3.select("#description").text("DESCRIPTION: " + d.description);
-      d3.select("#big-image-box img").attr("src", d.image_file).style("visibility", "visible");
-      d3.select("#info-box").style("visibility", "visible");
-  });
-  
-</script>
 </body>
 </html>
